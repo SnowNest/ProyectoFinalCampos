@@ -11,46 +11,30 @@ package proyecto;
  */
 public class cuestionario {
     
-    String [] preguntas = 
-    { 
-        "¿Capital de Mexico?",
-        "¿Capital de Estados Unidos?",
-        "¿Capital de Alemania?",
-        "¿Capital de Francia?",
-        "¿Capital de España?",
-        "¿Capital de Italia?",
-        "¿Capital de Argentina?",
-        "¿Capital de Japon?",
-        "¿Capital de Belgica?",
-        "¿Capital de Peru?",
-        "¿Capital de Hungria?",
-        "¿Capital de Austria?",
-        "¿Capital de Suecia?",
-        "¿Capital de Venesuela?",
-        "¿Capital de Clombia?",
-    };
+    String [] preguntas = new String[15];
+
+    String [] respuestas = new String[15];
     
-    String [] respuestas = 
-    {
-        "Ciudad de Mexico",
-        "Washington D.C.",
-        "Berlin",
-        "Paris",
-        "Madrid",
-        "Roma",
-        "Buenos Aires",
-        "Tokio",
-        "Bruselas",
-        "Lima",
-        "Budapest",
-        "Viena",
-        "Estocolmo",
-        "Caracas",
-        "Bogota",
-    };
+    public void cargar(){
+        preguntas originales = new preguntas();
+        for(int i = 0; i < 15; i++){
+            preguntas[i] = originales.pregunta(i);
+            respuestas[i] = originales.respuesta(i);
+            
+        }
+    }
     
     public String mostrarPregunta(int i){
         return preguntas[i];
+    }
+    
+    public String mostrarRespuestaCorrecta(int i){
+        return respuestas[i];
+    }
+    
+    public void cambiarPregunta(int i, String pregunta, String respuesta){
+        preguntas[i] = pregunta;
+        respuestas[i] = respuesta; 
     }
     
 }
