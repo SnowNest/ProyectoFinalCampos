@@ -33,8 +33,8 @@ public class cuestionario {
     }
     
     public void cambiarPregunta(int i, String pregunta, String respuesta){
-        preguntas[i] = pregunta;
-        respuestas[i] = respuesta; 
+        preguntas[i-1] = pregunta;
+        respuestas[i-1] = respuesta; 
     }
     
 }

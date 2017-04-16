@@ -1,6 +1,8 @@
 
 package proyecto;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /*
  * @author Nestor M.Hernandez
  */
@@ -49,5 +51,15 @@ public class preguntas {
     
     public String respuesta(int i){
         return respuestas[i];
+    }
+    
+    public String respuestaAleatoria(int i){
+        int pregunta = ThreadLocalRandom.current().nextInt(0, 15);
+        
+        if (respuestas[i] != respuestas[pregunta]){
+            return respuestas[pregunta];
+        }
+
+        return respuestas[pregunta + 1];
     }
 }
